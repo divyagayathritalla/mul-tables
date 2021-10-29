@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    table
+  </title>
+</head>
+<center>
+
+  <body>
+    <br />
+    <br />
+
+    enter number : <input type="number" id="n1" style="border-radius: 5px; " /><br /><br />
+
+    enter range : <input type="number" id="n2" style="border-radius: 5px;" /><br /><br />
+
+    <button onclick="multiplication()"> print table</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="output"></div><br />
+    <script>
+      var text = "";
+      function multiplication() {
+        let number = document.getElementById("n1").value;
+        let range = document.getElementById("n2").value;
+        if (number == "" || range == "") {
+          window.alert("enter the appropriate value")
+        }
+        else {
+
+          for (let i = 1; i <= range; i++) {
+            var result = number * i;
+            document.getElementById("output").innerHTML = (text += number + " x " + i + " = " + result + "</br>")
+
+          }
+        }
+      }
+    </script>
+
+  </body>
+</center>
+
+</html>
